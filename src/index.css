@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Color variables for future use */
+  :root {
+    /* Light Theme */
+    --color-bg: theme(colors.slate.900);
+    --color-bg-secondary: theme(colors.slate.800);
+    --color-bg-light: theme(colors.slate.200);
+    --color-bg-light-secondary: theme(colors.slate.100);
+    --color-accent: theme(colors.blue.600);
+    --color-text: theme(colors.slate.400);
+    --color-text-dark: theme(colors.slate.600);
+    --color-text-light: theme(colors.slate.200);
+    --color-dark-1: theme(colors.slate.200);
+    --color-dark-2: theme(colors.slate.300);
+    --color-dark-3: theme(colors.slate.700);
+  }
+
+  * {
+    @apply focus:ring-[3px] outline-none  ring-accent;
+  }
+}
