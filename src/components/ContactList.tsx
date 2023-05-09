@@ -12,15 +12,17 @@ const ContactList = (props: Props) => {
 
   if (contacts.length === 0) {
     return (
-      <Error className='flex flex-col justify-between'>
-        <div>
-          <h1 className='text-3xl font-bold mb-3 capitalize'>
-            No contact found!
-          </h1>
-          <h2>Please add contact from create contact button</h2>
-        </div>
-        <CreateContactBtn className='self-end' />
-      </Error>
+      <div className='h-2/3 flex justify-center items-center p-5'>
+        <Error contentClassName='flex flex-col justify-between'>
+          <div>
+            <h1 className='text-3xl font-bold mb-3 capitalize'>
+              No contact found!
+            </h1>
+            <h2>Please add contact from create contact button</h2>
+          </div>
+          <CreateContactBtn className='self-end' />
+        </Error>
+      </div>
     );
   }
 

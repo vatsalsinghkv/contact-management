@@ -1,10 +1,4 @@
-import {
-  MapContainer,
-  Marker,
-  Popup,
-  TileLayer,
-  ZoomControl,
-} from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import marker from '../assets/marker-icon.png';
 import 'leaflet/dist/leaflet.css';
@@ -25,15 +19,16 @@ interface ICountryData {
   recovered: number;
 }
 
-type Props = {};
-
-const Map = (props: Props) => {
+const Map = () => {
   const position: [number, number] = [51.505, -0.09];
-  const { isLoading, data } = useQuery('country-data', getCountryWiseCases);
+  const { isLoading, data, isError, error } = useQuery(
+    'country-data',
+    getCountryWiseCases
+  );
 
   const countriesData: ICountryData[] = [];
 
-  if (isLoading && !data) {
+  if (isLoading) {
     return (
       <div className='relative h-1/2 bg-white rounded-lg shadow-md p-3'>
         <Spinner />
@@ -41,15 +36,18 @@ const Map = (props: Props) => {
     );
   }
 
-  if (!isLoading && !data) {
+  if (isError) {
     return (
-      <Error>
-        <h1>No data found</h1>
+      <Error className='w-full'>
+        <h1 className='text-3xl font-bold mb-3 capitalize'>
+          Oops! we've got an error
+        </h1>
+        <h2>{(error as any)?.message ?? 'Something went wrong'}</h2>
       </Error>
     );
   }
 
-  data.data.forEach((res) => {
+  data!.data.forEach((res) => {
     countriesData.push({
       name: res.country,
       coords: [res.countryInfo.lat, res.countryInfo.long],

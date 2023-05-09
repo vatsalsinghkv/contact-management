@@ -13,11 +13,12 @@ dayjs.locale('en'); // or your preferred locale
 MyChart.register(CategoryScale);
 
 const LineChart = () => {
-  const { isLoading, data } = useQuery('covid-data', getCovidData);
+  const { isLoading, data, error, isError } = useQuery(
+    'covid-data',
+    getCovidData
+  );
 
-  console.log(data?.data);
-
-  if (isLoading && !data) {
+  if (isLoading) {
     return (
       <div className='relative h-1/2 bg-white rounded-lg shadow-md p-3'>
         <Spinner />
@@ -25,20 +26,22 @@ const LineChart = () => {
     );
   }
 
-  if (!isLoading && !data) {
+  if (isError) {
     return (
-      <Error>
-        <h1>No data found</h1>
+      <Error className='w-full'>
+        <h1 className='text-3xl font-bold mb-3 capitalize'>
+          Oops! we've got an error
+        </h1>
+        <h2>{(error as any)?.message ?? 'Something went wrong'}</h2>
       </Error>
     );
   }
-
   const chartData = {
-    labels: Object.keys(data.data.cases).map((date) => dayjs(date).toDate()),
+    labels: Object.keys(data!.data.cases).map((date) => dayjs(date).toDate()),
     datasets: [
       {
         label: 'Cases',
-        data: Object.values(data.data.cases),
+        data: Object.values(data!.data.cases),
         fill: false,
         borderColor: '#2563eb',
         pointRadius: 2,
@@ -66,6 +69,7 @@ const LineChart = () => {
       },
     },
   };
+
   return (
     <div className='bg-white rounded-lg shadow-md p-3'>
       <Line
