@@ -6,7 +6,7 @@
   This is a simple web application for managing contacts. With data visualization for the covid cases.
 </p>
 
-[![Preview](https://github.com/vatsalsinghkv/contact-management/assets/68834718/e41e8391-b825-4d89-8237-37d2bc96a75a)](https://vatsalsinghkv.vercel.app/)
+[![Preview](https://github.com/vatsalsinghkv/contact-management/assets/68834718/e41e8391-b825-4d89-8237-37d2bc96a75a)](https://contact-management-kv.vercel.app/)
 
 ## Running the App
 
