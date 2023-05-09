@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+<h1 align="center">
+  Contact Management App
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  This is a simple web application for managing contacts. With data visualization for the covid cases.
+</p>
 
-## Available Scripts
+[![Preview](https://github.com/vatsalsinghkv/contact-management/assets/68834718/e41e8391-b825-4d89-8237-37d2bc96a75a)](https://vatsalsinghkv.vercel.app/)
 
-In the project directory, you can run:
+## Running the App
 
-### `yarn start`
+To run the app, you'll need to have Node.js and NPM installed on your machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+git clone https://github.com/vatsalsinghkv/contact-management.git
+```
 
-### `yarn test`
+2. Navigate to the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+cd contact-management
+```
 
-### `yarn build`
+3. Install the dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run server
+```
 
-### `yarn eject`
+5. In another terminal, start the client:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. Open your web browser and navigate to `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technologies Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/en/main/)
+- [React Query](https://tanstack.com/)
+- [React Leaflet](https://react-leaflet.js.org/)
+- [Chart.js](https://www.chartjs.org/)
 
-## Learn More
+## API Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- World wide data of cases: https://disease.sh/v3/covid-19/all
+- Country Specific data of cases: https://disease.sh/v3/covid-19/countries
+- Graph data for cases with date: https://disease.sh/v3/covid-19/historical/all?lastdays=all
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
+
+- Website - [vatsalsinghkv.vercel.app](https://vatsalsinghkv.vercel.app)
+- Github - [@vatsalsinghkv](https://github.com/vatsalsinghkv)
+- LinkedIn - [@vatsalsinghkv](https://www.linkedin.com/in/vatsalsinghkv/)
+- Twitter - [@vatsalsinghkv](https://www.twitter.com/vatsalsinghkv)
+- Instagram - [@vatsalsinghkv](https://www.instagram.com/vatsalsinghkv)
+- Facebook - [@vatsalsinghkv](https://www.facebook.com/vatsal.singh.kv)
+- devChallenges - [@vatsalsinghkv](https://devchallenges.io/portfolio/vatsalsinghkv)
+- Frontend Mentor - [@vatsalsinghkv](https://www.frontendmentor.io/profile/vatsalsinghkv)
+
+## Acknowledgements
+
+- [https://transform.tools/json-to-typescript](https://transform.tools/json-to-typescript) - Getting response types
