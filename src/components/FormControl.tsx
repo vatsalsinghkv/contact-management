@@ -1,4 +1,4 @@
-import { joinWords } from '../utils/helper';
+import { joinWords } from '../lib/utils/helper';
 
 type Props = {
   label: string;

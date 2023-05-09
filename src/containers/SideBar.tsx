@@ -1,4 +1,4 @@
-import { LinkType } from '../types';
+import { LinkType } from '../lib/utils/types';
 import { NavLink } from 'react-router-dom';
 
 type Props = {

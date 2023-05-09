@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import Contact from '../models/contact';
+import Contact from '../lib/models/contact';
 
 type SliceType = {
   contacts: Contact[];

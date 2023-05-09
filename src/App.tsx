@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Chart, Contact, NotFound } from './pages';
-import { ContactForm, Layout } from './components';
+import { ContactForm } from './components';
+import { Layout } from './containers';
 
 function App() {
   return (

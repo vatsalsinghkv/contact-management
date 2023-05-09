@@ -2,10 +2,10 @@ import { FormEvent, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { contactsActions } from '../store/contacts';
-import { getId } from '../utils/helper';
+import { getId } from '../lib/utils/helper';
 import { Button, FormControl } from '.';
-import Contact from '../models/contact';
-import useInput from '../hooks/use-input';
+import Contact from '../lib/models/contact';
+import useInput from '../lib/hooks/use-input';
 import { RootState } from '../store';
 
 const ContactForm = () => {

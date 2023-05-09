@@ -1,5 +1,5 @@
 import { MouseEvent } from 'react';
-import Contact from '../models/contact';
+import Contact from '../lib/models/contact';
 import Button from './Button';
 import { useDispatch } from 'react-redux';
 import { contactsActions } from '../store/contacts';

@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
-import Contact from '../models/contact';
+import Contact from '../lib/models/contact';
 import { ContactCard, CreateContactBtn, Error } from './';
 
 type Props = {};
